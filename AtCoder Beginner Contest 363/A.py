@@ -1,5 +1,14 @@
-N,M = map(int,input().split())
+R = int(input())
 
-A = list(map(int,input().split()))
+result = 0
+if R <= 99:
+    result = 100- R
 
-print(A)
+elif R <= 199:
+    result = 200 - R
+
+elif R <= 299:
+    result = 300 - R
+
+
+print(result)
