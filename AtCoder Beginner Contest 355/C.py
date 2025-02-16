@@ -7,7 +7,8 @@ A = list(map(int,input().split()))
 全ての列に対してその列が何ターン目にビンゴを達成するか求め、それらの最小値を答えればよい。
 """
 
-mat = [[None] * N for i in range(N)]
+#列３ 行３ 斜め２の順番で値を入れていく
+ans = [0] * (N * 2 +2)
 
 for i in range(T):
-    x,y = A[i] // N, A[i] % N
+    
