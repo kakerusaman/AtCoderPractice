@@ -11,14 +11,6 @@ tmp = 0
 #今現在の値を保持する
 count = 0
 
-#Bよりも小さくならないように判定する。
-bcount = 0
-wcount = 0
-
-#二回ダメだったらもうダメでしょ
-twoflag = 0
-
-
 for i in range(N):
     tmp += B[i]
     if i < M and W[i] >= 0:
