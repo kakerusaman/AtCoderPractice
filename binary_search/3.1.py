@@ -1,20 +1,30 @@
-N,X = map(int,input().split())
+N,K = map(int,input().split())
 
 A = list(map(int,input().split()))
 
-def search(x, A):
-    L = 0
-    R = N - 1
-    while L <= R:
-        M = (L + R) // 2
-        if x < A[M]:
-            R = M - 1
-        if x == A[M]:
+
+def search(X):
+
+    if A[N-1] < X:
+        return -1
+
+    ng = 0 -1
+    ok = N
+    while ok - ng > 1:
+        M = (ok+ng) // 2
+
+        if A[M] > X:
+            ok = M
+        
+        elif A[M] == X:
             return M
-        if x > A[M]:
-            R = M + 1
-    return -1
+        
+        elif A[M] < X:
+            ng = M
+        
+    return M
 
-Answer = search(X,A)
 
-print(Answer + 1)
+ans = search(K)
+
+print(ans)
