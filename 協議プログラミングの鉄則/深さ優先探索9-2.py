@@ -35,4 +35,3 @@ for a,b in edges:
     G[b].append(a)
 
 visited = [False] * (N+1)
-
